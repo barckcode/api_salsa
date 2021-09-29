@@ -1,5 +1,8 @@
 from fastapi import FastAPI
+
+# Internal Modules
 from routes.singers import singers_routes
+from routes.songs import songs_routes
 
 # Init FastAPI
 app = FastAPI(
@@ -14,6 +17,10 @@ app = FastAPI(
         {
             "name": "Cantantes",
             "description": "Enpoint de Cantantes"
+        },
+        {
+            "name": "Canciones",
+            "description": "Enpoint de Canciones"
         }
     ]
 )
@@ -21,3 +28,4 @@ app = FastAPI(
 
 # Include Routes to FastAPI
 app.include_router(singers_routes)
+app.include_router(songs_routes)

@@ -1,7 +1,8 @@
 import datetime
 from pydantic import BaseModel
 
-class Singers_Model(BaseModel):
+
+class SingersModel(BaseModel):
     id: str
     name: str
     country: str
