@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routes.singers import singers
+from routes.singers import singers_routes
 
 # Init FastAPI
 app = FastAPI(
@@ -20,4 +20,4 @@ app = FastAPI(
 
 
 # Include Routes to FastAPI
-app.include_router(singers)
+app.include_router(singers_routes)
