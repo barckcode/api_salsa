@@ -1,4 +1,5 @@
 import datetime
+from typing import Optional
 from pydantic import BaseModel
 
 
@@ -7,5 +8,5 @@ class SingersModel(BaseModel):
     name: str
     country: str
     date_birth: datetime.date
-    date_death: datetime.date
+    date_death: Optional[datetime.date]
     description: str
